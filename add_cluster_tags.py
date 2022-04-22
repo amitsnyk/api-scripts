@@ -36,7 +36,7 @@ while response_dict['projects']:
         continue
 
     #Populate parameters for API call to add tags
-    url = url = "https://snyk.io/api/v1/org/"+ org_id + "/project/"+proj_id+"/tags"
+    url = "https://snyk.io/api/v1/org/"+ org_id + "/project/"+proj_id+"/tags"
     values = f"""
       {{
         "key": "cluster",
