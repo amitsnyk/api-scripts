@@ -1,3 +1,3 @@
 # api-scripts
 
-Scripts that leverage the Snyk API.
+A collection of scripts that leverage the Snyk API.
