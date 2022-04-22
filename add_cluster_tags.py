@@ -1,4 +1,4 @@
-#An API script to tag all K8s clusters with the name of the cluster.
+#An API script to tag all K8s projects with the name of the image cluster.
 
 import requests
 
@@ -22,7 +22,6 @@ values = """
 
 #Send API call
 response = requests.request("POST", url, headers=headers, data=values)
-
 response_dict = response.json()
 
 #Iterate through projects and assign tags based on cluster name
@@ -34,7 +33,6 @@ while response_dict['projects']:
     #Confirm the project does not already have a cluster tag
     if project['tags'] and "cluster" in project['tags'][0].values():
         print(proj_id+" has a cluster tag")
-        #print(project["tags"])
         continue
 
     #Populate parameters for API call to add tags
