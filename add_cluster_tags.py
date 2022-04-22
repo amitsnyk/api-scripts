@@ -3,7 +3,7 @@
 import requests
 
 #Collect user input
-org_id = input("Enter the org ID with the projects you would like to tag:")
+org_id = input("Enter the ID of the organization containing the projects you would like to tag:")
 auth_token = input("Enter your Snyk API token:")
 
 #Populate parameters for API call to get all k8s projects
